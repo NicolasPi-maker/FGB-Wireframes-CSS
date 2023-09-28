@@ -1,0 +1,45 @@
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.productsWrapper {
+  transform: translateX(-100%);
+  transition: .4s ease-in-out;
+}
+
+.active {
+  transform: translateX(0);
+}
+
+.activeButton {
+  transform: scale(1.3);
+  transition: .3s ease-in-out;
+}
+
+.bg-iceCream {
+  background-color: var(--iceCream-bg-color);
+}
+
+.bg-wrap {
+  background-color: var(--wrap-bg-color);
+}
+
+.bg-wings {
+  background-color: var(--wings-bg-color);
+}
+
+.bg-soda {
+  background-color: var(--soda-bg-color);
+}
+
+.carouselButtonActiveAnimation {
+  animation: bounce .4s ease-in-out both;
+}

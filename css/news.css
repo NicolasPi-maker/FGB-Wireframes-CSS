@@ -1,0 +1,41 @@
+.newsWrapper {
+  width: 100%;
+  height: 300px;
+}
+.newsWrapper h3 {
+  top: 0;
+  z-index: 999;
+}
+.newsWrapper img {
+  height: 100%;
+}
+.newsWrapper button {
+  transition: 0.3s ease-in-out;
+  bottom: 0;
+}
+
+/* desktop breakpoint */
+@media screen and (min-width: 1100px) {
+  .newsWrapper {
+    transition: 0.3s ease-in-out;
+    width: 200px;
+    height: 600px;
+  }
+  .newsWrapper h3 {
+    top: -150px;
+    transition: 0.3s ease-in-out;
+  }
+  .newsWrapper button {
+    bottom: -150px;
+  }
+  .newsWrapper:hover {
+    width: 400px;
+    transform: scale(1.1);
+  }
+  .newsWrapper:hover h3 {
+    top: 0;
+  }
+  .newsWrapper:hover button {
+    bottom: 0;
+  }
+}

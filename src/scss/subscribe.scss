@@ -1,0 +1,23 @@
+.fidelityForm {
+  transition: .4s ease-in-out;
+  height: 100%;
+  transform: translateY(-150%);
+}
+
+.subscribeButton {
+  transition: .3s ease-in-out;
+  opacity: 0.8;
+}
+
+.subscribeButton:hover {
+  transform: scale(1.1) rotate(30deg);
+  opacity: 1;
+}
+
+.cancelSubscribeButton {
+  transform: translateY(150%);
+}
+
+.activeSubscribe {
+  transform: translateY(0);
+}

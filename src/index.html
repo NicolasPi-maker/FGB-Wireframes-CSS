@@ -1,0 +1,711 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="./uploads/favicon.ico">
+    <title>Bienvenue chez Fast Good Burger</title>
+    <link rel="stylesheet" href="../css/styles.css">
+  </head>
+  <body>
+    <header class="container-fluid fixed-top shadow" role="button">
+      <nav class="row py-0 px-0 d-flex justify-content-center bg-white">
+        <div role="button" class="bg-white col-2 mx-2 py-2 d-flex  justify-content-between align-items-center">
+          <a href="#">
+            <img src="./uploads/fgbLogo.jpg" class="rounded-circle" width="75px" height="75px" alt="logo du site fast good burger">
+          </a>
+        </div>
+        <!-- Start desktop nav -->
+        <ul class="nav m-0 d-none d-lg-flex flex-row col-lg-9 col-xl-6 justify-content-end align-items-center">
+          <li role="button" class="col-lg-3 btn bg-primary nav-item px-1 py-0 mx-3 text-white rounded-pill">
+            <a href="#foods" class="nav-link text-white">Nos Burgers</a></li>
+          <li role="button" class="col-lg-2 btn bg-primary nav-item px-1 py-0 mx-3 text-white rounded-pill">
+            <a href="#news" class="nav-link text-white">Actualités</a></li>
+          <li role="button" class="col-lg-2 btn bg-primary nav-item px-1 py-0 mx-3 text-white rounded-pill">
+            <a href="#contact" class="nav-link text-white">Contact</a></li>
+          <li role="button" class="col-1 btn nav-item mx-1 text-white d-flex justify-content-center">
+            <a href="#" class="nav-link text-white position-relative">
+              <svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+                <path fill="currentColor" d="M132 120v56a4 4 0 0 1-8 0v-56a4 4 0 0 1 8 0Zm103.89-22.41l-13.89 104A12 12 0 0 1 210.13 212H45.87A12 12 0 0 1 34 201.59l-13.86-104A12 12 0 0 1 32 84h38.18L125 21.37a4 4 0 0 1 6 0L185.82 84H224a12 12 0 0 1 11.89 13.59ZM80.81 84h94.38L128 30.07ZM227 93.36a3.94 3.94 0 0 0-3-1.36H32a4 4 0 0 0-4 4.52l13.86 104a4 4 0 0 0 4 3.47h164.27a4 4 0 0 0 4-3.47L228 96.53a3.94 3.94 0 0 0-1-3.17ZM181.2 116a4 4 0 0 0-4.38 3.58l-5.6 56a4 4 0 0 0 3.58 4.42h.41a4 4 0 0 0 4-3.6l5.6-56a4 4 0 0 0-3.61-4.4Zm-106.4 0a4 4 0 0 0-3.58 4.38l5.6 56a4 4 0 0 0 4 3.6h.41a4 4 0 0 0 3.58-4.38l-5.6-56a4 4 0 0 0-4.41-3.6Z"/>
+              </svg>
+              <div class="productCount p-3 text-primary rounded-circle fs-5 bg-white shadow position-absolute align-items-center d-flex justify-content-center"></div>
+            </a>
+          </li>
+          <li role="button" class="col-1 btn nav-item mx-1 text-white d-flex justify-content-center">
+            <a href="#" class="nav-link text-white">
+              <svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+                <path fill="currentColor" d="M227.46 214c-16.52-28.56-43-48.06-73.68-55.09a68 68 0 1 0-51.56 0c-30.64 7-57.16 26.53-73.68 55.09a4 4 0 0 0 6.92 4C55 184.19 89.62 164 128 164s73 20.19 92.54 54a4 4 0 0 0 3.46 2a3.93 3.93 0 0 0 2-.54a4 4 0 0 0 1.46-5.46ZM68 96a60 60 0 1 1 60 60a60.07 60.07 0 0 1-60-60Z"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <!-- End Desktop nav -->
+        <!-- Start Burger nav for mobile -->
+        <div class="col navbar navbar-primary d-lg-none justify-content-end mx-3">
+          <li role="button" class="col-3 btn nav-item mx-3 text-white d-flex justify-content-center">
+            <a href="#" class="nav-link text-white position-relative">
+              <svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+                <path fill="currentColor" d="M132 120v56a4 4 0 0 1-8 0v-56a4 4 0 0 1 8 0Zm103.89-22.41l-13.89 104A12 12 0 0 1 210.13 212H45.87A12 12 0 0 1 34 201.59l-13.86-104A12 12 0 0 1 32 84h38.18L125 21.37a4 4 0 0 1 6 0L185.82 84H224a12 12 0 0 1 11.89 13.59ZM80.81 84h94.38L128 30.07ZM227 93.36a3.94 3.94 0 0 0-3-1.36H32a4 4 0 0 0-4 4.52l13.86 104a4 4 0 0 0 4 3.47h164.27a4 4 0 0 0 4-3.47L228 96.53a3.94 3.94 0 0 0-1-3.17ZM181.2 116a4 4 0 0 0-4.38 3.58l-5.6 56a4 4 0 0 0 3.58 4.42h.41a4 4 0 0 0 4-3.6l5.6-56a4 4 0 0 0-3.61-4.4Zm-106.4 0a4 4 0 0 0-3.58 4.38l5.6 56a4 4 0 0 0 4 3.6h.41a4 4 0 0 0 3.58-4.38l-5.6-56a4 4 0 0 0-4.41-3.6Z"/>
+              </svg>
+              <div class="productCount p-3 text-primary rounded-circle fs-5 bg-white shadow position-absolute align-items-center d-flex justify-content-center"></div>
+            </a>
+          </li>
+          <button class="navbar-toggler text-primary border-primary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        <div class="collapse d-lg-none" id="navbarToggleExternalContent">
+          <ul class="nav m-0 col d-flex d-flex-column justify-content-end">
+            <li role="button" class="col-12 btn nav-item px-1 py-2">
+              <a href="#foods" class="nav-link text-primary border border-primary">Nos Burgers</a></li>
+            <li role="button" class="col-12 btn nav-item px-1 py-2">
+              <a href="#news" class="nav-link text-primary border border-primary">Actualités</a></li>
+            <li role="button" class="col-12 btn nav-item px-1 py-2">
+              <a href="#contact" class="nav-link text-primary border border-primary">Contact</a></li>
+            <li role="button" class="col-12 btn nav-item mx-1 text-white d-flex justify-content-center">
+              <a href="#" class="nav-link text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+                  <path fill="currentColor" d="M227.46 214c-16.52-28.56-43-48.06-73.68-55.09a68 68 0 1 0-51.56 0c-30.64 7-57.16 26.53-73.68 55.09a4 4 0 0 0 6.92 4C55 184.19 89.62 164 128 164s73 20.19 92.54 54a4 4 0 0 0 3.46 2a3.93 3.93 0 0 0 2-.54a4 4 0 0 0 1.46-5.46ZM68 96a60 60 0 1 1 60 60a60.07 60.07 0 0 1-60-60Z"/>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- End off menu for mobile -->
+      </nav>
+    </header>
+    <main class="container-fluid bg-secondary">
+      <section class="row d-flex flex-column align-items-center justify-content-center position-relative">
+        <div id="alertErrorWrapper" class="col-6"></div>
+        <div id="alertSuccessWrapper" class="col-6"></div>
+        <article class="col d-flex justify-content-center align-items-center flex-column">
+          <h1 class="text-center text-white col mt-5 text-shadow">Fast Good Burger</h1>
+          <h3 class="text-center text-primary fw-bold col">Les burgers comme à la maison</h3>
+          <img src="./uploads/fgbLogo.jpg" class="col-11 col-lg-6 col-xl-4 m-auto" alt="logo du site fast good burger">
+        </article>
+        <article class="row bg-secondary d-flex justify-content-center mb-5">
+          <button class="getOrderButton fs-5 px-5 col-sm-6 col-lg-4 col-xl-2 col-9 btn btn-primary p2 mx-3 text-white rounded-pill shadow">Je commande !</button>
+        </article>
+      </section>
+      <section class="position-relative d-flex align-items-center justify-content-center bg-white row overflow-auto">
+        <div  id="foods" class="active productsWrapper burger position-relative bg-white row text-primary d-flex justify-content-center px-2 position-absolute">
+          <h2 class="col-12 mt-5 py-5 text-center">Nos burgers</h2>
+          <article class="col-sm-9 col-lg-4 col-xl-3 m-3 m-sm-5 foodWrapper rounded-5 bg-info">
+            <div class="row shadow rounded-5 productWrapper n1">
+              <div class="col-5 d-flex p-0">
+                <img src="./uploads/burger.png" class="w-100 rounded-5 shadow" alt="">
+              </div>
+              <div class="col-7 d-flex flex-column justify-content-between">
+                <h3 class="fs-5 text-white p-3 mb-0">Double Classic Burger</h4>
+                <p class="fs-4 fw-bold text-white px-3 m-0">6.99€</p>
+                <div class="d-flex justify-content-end">
+                  <button class="addProductButton btn btn-primary text-white m-3 rounded-pill px-4">Ajouter</button>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="col-sm-9 col-lg-4 col-xl-3 m-3 m-sm-5 foodWrapper rounded-5 bg-info">
+            <div class="row shadow rounded-5">
+              <div class="col-5 d-flex p-0">
+                <img src="./uploads/burger.png" class="w-100 rounded-5 shadow" alt="">
+              </div>
+              <div class="col-7 d-flex flex-column justify-content-between">
+                <h3 class="fs-5 text-white p-3 mb-0">Double Classic Burger</h4>
+                <p class="fs-4 fw-bold text-white px-3 m-0">6.99€</p>
+                <div class="d-flex justify-content-end">
+                  <button class="addProductButton btn btn-primary text-white m-3 rounded-pill px-4">Ajouter</button>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="col-sm-9 col-lg-4 col-xl-3 m-3 m-sm-5 foodWrapper rounded-5 bg-info">
+            <div class="row shadow rounded-5">
+              <div class="col-5 d-flex p-0">
+                <img src="./uploads/burger.png" class="w-100 rounded-5 shadow" alt="">
+              </div>
+              <div class="col-7 d-flex flex-column justify-content-between">
+                <h3 class="fs-5 text-white p-3 mb-0">Double Classic Burger</h4>
+                <p class="fs-4 fw-bold text-white px-3 m-0">6.99€</p>
+                <div class="d-flex justify-content-end">
+                  <button class="addProductButton btn btn-primary text-white m-3 rounded-pill px-4">Ajouter</button>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="col-sm-9 col-lg-4 col-xl-3 m-3 m-sm-5 foodWrapper rounded-5 bg-info">
+            <div class="row shadow rounded-5">
+              <div class="col-5 d-flex p-0">
+                <img src="./uploads/burger.png" class="w-100 rounded-5 shadow" alt="">
+              </div>
+              <div class="col-7 d-flex flex-column justify-content-between">
+                <h3 class="fs-5 text-white p-3 mb-0">Double Classic Burger</h4>
+                <p class="fs-4 fw-bold text-white px-3 m-0">6.99€</p>
+                <div class="d-flex justify-content-end">
+                  <button class="addProductButton btn btn-primary text-white m-3 rounded-pill px-4">Ajouter</button>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="col-sm-9 col-lg-4 col-xl-3 m-3 m-sm-5 foodWrapper rounded-5 bg-info">
+            <div class="row shadow rounded-5">
+              <div class="col-5 d-flex p-0">
+                <img src="./uploads/burger.png" class="w-100 rounded-5 shadow" alt="">
+              </div>
+              <div class="col-7 d-flex flex-column justify-content-between">
+                <h3 class="fs-5 text-white p-3 mb-0">Double Classic Burger</h4>
+                <p class="fs-4 fw-bold text-white px-3 m-0">6.99€</p>
+                <div class="d-flex justify-content-end">
+                  <button class="addProductButton btn btn-primary text-white m-3 rounded-pill px-4">Ajouter</button>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="col-sm-9 col-lg-4 col-xl-3 m-3 m-sm-5 foodWrapper rounded-5 bg-info">
+            <div class="row shadow rounded-5">
+              <div class="col-5 d-flex p-0">
+                <img src="./uploads/burger.png" class="w-100 rounded-5 shadow" alt="">
+              </div>
+              <div class=" col-7 d-flex flex-column justify-content-between">
+                <h3 class="fs-5 text-white p-3 mb-0">Double Classic Burger</h4>
+                <p class="fs-4 fw-bold text-white px-3 m-0">6.99€</p>
+                <div class="d-flex justify-content-end">
+                  <button class="addProductButton btn btn-primary text-white m-3 rounded-pill px-4">Ajouter</button>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+          <div class="productsWrapper iceCream position-relative bg-white row text-primary d-flex justify-content-center px-2">
+            <h2 class="col-12 mt-5 py-5 text-center">Nos Glaces</h2>
+            <article class="col-sm-9 col-lg-4 col-xl-3 m-3 m-sm-5 foodWrapper rounded-5 bg-iceCream">
+              <div class="row shadow rounded-5">
+                <div class="col-5 d-flex p-0">
+                  <img src="./uploads/iconIceCream.png" class="w-100 rounded-5 shadow" alt="">
+                </div>
+                <div class="col-7 d-flex flex-column justify-content-between">
+                  <h3 class="fs-5 text-white p-3 mb-0">Sunday banane chocolat</h4>
+                  <p class="fs-4 fw-bold text-white px-3 m-0">6.99€</p>
+                  <div class="d-flex justify-content-end">
+                    <button class="addProductButton btn btn-primary text-white m-3 rounded-pill px-4">Ajouter</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="col-sm-9 col-lg-4 col-xl-3 m-3 m-sm-5 foodWrapper rounded-5 bg-iceCream">
+              <div class="row shadow rounded-5">
+                <div class="col-5 d-flex p-0">
+                  <img src="./uploads/iconIceCream.png" class="w-100 rounded-5 shadow" alt="">
+                </div>
+                <div class="col-7 d-flex flex-column justify-content-between">
+                  <h3 class="fs-5 text-white p-3 mb-0">Sunday banane chocolat</h4>
+                  <p class="fs-4 fw-bold text-white px-3 m-0">6.99€</p>
+                  <div class="d-flex justify-content-end">
+                    <button class="addProductButton btn btn-primary text-white m-3 rounded-pill px-4">Ajouter</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="col-sm-9 col-lg-4 col-xl-3 m-3 m-sm-5 foodWrapper rounded-5 bg-iceCream">
+              <div class="row shadow rounded-5">
+                <div class="col-5 d-flex p-0">
+                  <img src="./uploads/iconIceCream.png" class="w-100 rounded-5 shadow" alt="">
+                </div>
+                <div class="col-7 d-flex flex-column justify-content-between">
+                  <h3 class="fs-5 text-white p-3 mb-0">Sunday banane chocolat</h4>
+                  <p class="fs-4 fw-bold text-white px-3 m-0">6.99€</p>
+                  <div class="d-flex justify-content-end">
+                    <button class="addProductButton btn btn-primary text-white m-3 rounded-pill px-4">Ajouter</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="col-sm-9 col-lg-4 col-xl-3 m-3 m-sm-5 foodWrapper rounded-5 bg-iceCream">
+              <div class="row shadow rounded-5">
+                <div class="col-5 d-flex p-0">
+                  <img src="./uploads/iconIceCream.png" class="w-100 rounded-5 shadow" alt="">
+                </div>
+                <div class="col-7 d-flex flex-column justify-content-between">
+                  <h3 class="fs-5 text-white p-3 mb-0">Sunday banane chocolat</h4>
+                  <p class="fs-4 fw-bold text-white px-3 m-0">6.99€</p>
+                  <div class="d-flex justify-content-end">
+                    <button class="addProductButton btn btn-primary text-white m-3 rounded-pill px-4">Ajouter</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="col-sm-9 col-lg-4 col-xl-3 m-3 m-sm-5 foodWrapper rounded-5 bg-iceCream">
+              <div class="row shadow rounded-5">
+                <div class="col-5 d-flex p-0">
+                  <img src="./uploads/iconIceCream.png" class="w-100 rounded-5 shadow" alt="">
+                </div>
+                <div class="col-7 d-flex flex-column justify-content-between">
+                  <h3 class="fs-5 text-white p-3 mb-0">Sunday banane chocolat</h4>
+                  <p class="fs-4 fw-bold text-white px-3 m-0">6.99€</p>
+                  <div class="d-flex justify-content-end">
+                    <button class="addProductButton btn btn-primary text-white m-3 rounded-pill px-4">Ajouter</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="col-sm-9 col-lg-4 col-xl-3 m-3 m-sm-5 foodWrapper rounded-5 bg-iceCream">
+              <div class="row shadow rounded-5">
+                <div class="col-5 d-flex p-0">
+                  <img src="./uploads/iconIceCream.png" class="w-100 rounded-5 shadow" alt="">
+                </div>
+                <div class="col-7 d-flex flex-column justify-content-between">
+                  <h3 class="fs-5 text-white p-3 mb-0">Sunday banane chocolat</h4>
+                  <p class="fs-4 fw-bold text-white px-3 m-0">6.99€</p>
+                  <div class="d-flex justify-content-end">
+                    <button class="addProductButton btn btn-primary text-white m-3 rounded-pill px-4">Ajouter</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="productsWrapper wrap position-relative bg-white row text-primary d-flex justify-content-center px-2 position-absolute">
+          <h2 class="col-12 mt-5 py-5 text-center">Nos wraps</h2>
+          <article class="col-sm-9 col-lg-4 col-xl-3 m-3 m-sm-5 foodWrapper rounded-5 bg-wrap">
+            <div class="row shadow rounded-5">
+              <div class="col-5 d-flex p-0">
+                <img src="./uploads/iconWrap.png" class="w-100 rounded-5 shadow" alt="">
+              </div>
+              <div class="col-7 d-flex flex-column justify-content-between">
+                <h3 class="fs-5 text-white p-3 mb-0">Grand Wrap Poulet</h4>
+                <p class="fs-4 fw-bold text-white px-3 m-0">6.99€</p>
+                <div class="d-flex justify-content-end">
+                  <button class="addProductButton btn btn-primary text-white m-3 rounded-pill px-4">Ajouter</button>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="col-sm-9 col-lg-4 col-xl-3 m-3 m-sm-5 foodWrapper rounded-5 bg-wrap">
+            <div class="row shadow rounded-5">
+              <div class="col-5 d-flex p-0">
+                <img src="./uploads/iconWrap.png" class="w-100 rounded-5 shadow" alt="">
+              </div>
+              <div class="col-7 d-flex flex-column justify-content-between">
+                <h3 class="fs-5 text-white p-3 mb-0">Grand Wrap Poulet</h4>
+                <p class="fs-4 fw-bold text-white px-3 m-0">6.99€</p>
+                <div class="d-flex justify-content-end">
+                  <button class="addProductButton btn btn-primary text-white m-3 rounded-pill px-4">Ajouter</button>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="col-sm-9 col-lg-4 col-xl-3 m-3 m-sm-5 foodWrapper rounded-5 bg-wrap">
+            <div class="row shadow rounded-5">
+              <div class="col-5 d-flex p-0">
+                <img src="./uploads/iconWrap.png" class="w-100 rounded-5 shadow" alt="">
+              </div>
+              <div class="col-7 d-flex flex-column justify-content-between">
+                <h3 class="fs-5 text-white p-3 mb-0">Grand Wrap Poulet</h4>
+                <p class="fs-4 fw-bold text-white px-3 m-0">6.99€</p>
+                <div class="d-flex justify-content-end">
+                  <button class="addProductButton btn btn-primary text-white m-3 rounded-pill px-4">Ajouter</button>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="col-sm-9 col-lg-4 col-xl-3 m-3 m-sm-5 foodWrapper rounded-5 bg-wrap">
+            <div class="row shadow rounded-5">
+              <div class="col-5 d-flex p-0">
+                <img src="./uploads/iconWrap.png" class="w-100 rounded-5 shadow" alt="">
+              </div>
+              <div class="col-7 d-flex flex-column justify-content-between">
+                <h3 class="fs-5 text-white p-3 mb-0">Grand Wrap Poulet</h4>
+                <p class="fs-4 fw-bold text-white px-3 m-0">6.99€</p>
+                <div class="d-flex justify-content-end">
+                  <button class="addProductButton btn btn-primary text-white m-3 rounded-pill px-4">Ajouter</button>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="col-sm-9 col-lg-4 col-xl-3 m-3 m-sm-5 foodWrapper rounded-5 bg-wrap">
+            <div class="row shadow rounded-5">
+              <div class="col-5 d-flex p-0">
+                <img src="./uploads/iconWrap.png" class="w-100 rounded-5 shadow" alt="">
+              </div>
+              <div class="col-7 d-flex flex-column justify-content-between">
+                <h3 class="fs-5 text-white p-3 mb-0">Grand Wrap Poulet</h4>
+                <p class="fs-4 fw-bold text-white px-3 m-0">6.99€</p>
+                <div class="d-flex justify-content-end">
+                  <button class="addProductButton btn btn-primary text-white m-3 rounded-pill px-4">Ajouter</button>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="col-sm-9 col-lg-4 col-xl-3 m-3 m-sm-5 foodWrapper rounded-5 bg-wrap">
+            <div class="row shadow rounded-5">
+              <div class="col-5 d-flex p-0">
+                <img src="./uploads/iconWrap.png" class="w-100 rounded-5 shadow" alt="">
+              </div>
+              <div class="col-7 d-flex flex-column justify-content-between">
+                <h3 class="fs-5 text-white p-3 mb-0">Grand Wrap Poulet</h4>
+                <p class="fs-4 fw-bold text-white px-3 m-0">6.99€</p>
+                <div class="d-flex justify-content-end">
+                  <button class="addProductButton btn btn-primary text-white m-3 rounded-pill px-4">Ajouter</button>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="productsWrapper fries position-relative bg-white row text-primary d-flex justify-content-center px-2 position-absolute">
+          <h2 class="col-12 mt-5 py-5 text-center">Nos petites faims</h2>
+          <article class="col-sm-9 col-lg-4 col-xl-3 m-3 m-sm-5 foodWrapper rounded-5 bg-wings">
+            <div class="row shadow rounded-5">
+              <div class="col-5 d-flex p-0">
+                <img src="./uploads/iconWings.png" class="w-100 rounded-5 shadow" alt="">
+              </div>
+              <div class="col-7 d-flex flex-column justify-content-between">
+                <h3 class="fs-5 text-white p-3 mb-0">12 tendres wings de poulet marinés</h4>
+                <p class="fs-4 fw-bold text-white px-3 m-0">6.99€</p>
+                <div class="d-flex justify-content-end">
+                  <button class="addProductButton btn btn-primary text-white m-3 rounded-pill px-4">Ajouter</button>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="col-sm-9 col-lg-4 col-xl-3 m-3 m-sm-5 foodWrapper rounded-5 bg-wings">
+            <div class="row shadow rounded-5">
+              <div class="col-5 d-flex p-0">
+                <img src="./uploads/iconWings.png" class="w-100 rounded-5 shadow" alt="">
+              </div>
+              <div class="col-7 d-flex flex-column justify-content-between">
+                <h3 class="fs-5 text-white p-3 mb-0">12 tendres wings de poulet marinés</h4>
+                <p class="fs-4 fw-bold text-white px-3 m-0">6.99€</p>
+                <div class="d-flex justify-content-end">
+                  <button class="addProductButton btn btn-primary text-white m-3 rounded-pill px-4">Ajouter</button>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="col-sm-9 col-lg-4 col-xl-3 m-3 m-sm-5 foodWrapper rounded-5 bg-wings">
+            <div class="row shadow rounded-5">
+              <div class="col-5 d-flex p-0">
+                <img src="./uploads/iconWings.png" class="w-100 rounded-5 shadow" alt="">
+              </div>
+              <div class="col-7 d-flex flex-column justify-content-between">
+                <h3 class="fs-5 text-white p-3 mb-0">12 tendres wings de poulet marinés</h4>
+                <p class="fs-4 fw-bold text-white px-3 m-0">6.99€</p>
+                <div class="d-flex justify-content-end">
+                  <button class="addProductButton btn btn-primary text-white m-3 rounded-pill px-4">Ajouter</button>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="col-sm-9 col-lg-4 col-xl-3 m-3 m-sm-5 foodWrapper rounded-5 bg-wings">
+            <div class="row shadow rounded-5">
+              <div class="col-5 d-flex p-0">
+                <img src="./uploads/iconWings.png" class="w-100 rounded-5 shadow" alt="">
+              </div>
+              <div class="col-7 d-flex flex-column justify-content-between">
+                <h3 class="fs-5 text-white p-3 mb-0">12 tendres wings de poulet marinés</h4>
+                <p class="fs-4 fw-bold text-white px-3 m-0">6.99€</p>
+                <div class="d-flex justify-content-end">
+                  <button class="addProductButton btn btn-primary text-white m-3 rounded-pill px-4">Ajouter</button>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="col-sm-9 col-lg-4 col-xl-3 m-3 m-sm-5 foodWrapper rounded-5 bg-wings">
+            <div class="row shadow rounded-5">
+              <div class="col-5 d-flex p-0">
+                <img src="./uploads/iconWings.png" class="w-100 rounded-5 shadow" alt="">
+              </div>
+              <div class="col-7 d-flex flex-column justify-content-between">
+                <h3 class="fs-5 text-white p-3 mb-0">12 tendres wings de poulet marinés</h4>
+                <p class="fs-4 fw-bold text-white px-3 m-0">6.99€</p>
+                <div class="d-flex justify-content-end">
+                  <button class="addProductButton btn btn-primary text-white m-3 rounded-pill px-4">Ajouter</button>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="col-sm-9 col-lg-4 col-xl-3 m-3 m-sm-5 foodWrapper rounded-5 bg-wings">
+            <div class="row shadow rounded-5">
+              <div class="col-5 d-flex p-0">
+                <img src="./uploads/iconWings.png" class="w-100 rounded-5 shadow" alt="">
+              </div>
+              <div class="col-7 d-flex flex-column justify-content-between">
+                <h3 class="fs-5 text-white p-3 mb-0">12 tendres wings de poulet marinés</h4>
+                <p class="fs-4 fw-bold text-white px-3 m-0">6.99€</p>
+                <div class="d-flex justify-content-end">
+                  <button class="addProductButton btn btn-primary text-white m-3 rounded-pill px-4">Ajouter</button>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="productsWrapper soda position-relative bg-white row text-primary d-flex justify-content-center px-2 position-absolute">
+          <h2 class="col-12 mt-5 py-5 text-center">Nos boissons</h2>
+          <article class="col-sm-9 col-lg-4 col-xl-3 m-3 m-sm-5 foodWrapper rounded-5 bg-soda">
+            <div class="row shadow rounded-5">
+              <div class="col-5 d-flex p-0">
+                <img src="./uploads/iconSoda.png" class="w-100 rounded-5 shadow" alt="">
+              </div>
+              <div class="col-7 d-flex flex-column justify-content-between">
+                <h3 class="fs-5 text-white p-3 mb-0">Coca-cola</h4>
+                <p class="fs-4 fw-bold text-white px-3 m-0">6.99€</p>
+                <div class="d-flex justify-content-end">
+                  <button class="addProductButton btn btn-primary text-white m-3 rounded-pill px-4">Ajouter</button>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="col-sm-9 col-lg-4 col-xl-3 m-3 m-sm-5 foodWrapper rounded-5 bg-soda">
+            <div class="row shadow rounded-5">
+              <div class="col-5 d-flex p-0">
+                <img src="./uploads/iconSoda.png" class="w-100 rounded-5 shadow" alt="">
+              </div>
+              <div class="col-7 d-flex flex-column justify-content-between">
+                <h3 class="fs-5 text-white p-3 mb-0">Coca-cola</h4>
+                <p class="fs-4 fw-bold text-white px-3 m-0">6.99€</p>
+                <div class="d-flex justify-content-end">
+                  <button class="addProductButton btn btn-primary text-white m-3 rounded-pill px-4">Ajouter</button>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="col-sm-9 col-lg-4 col-xl-3 m-3 m-sm-5 foodWrapper rounded-5 bg-soda">
+            <div class="row shadow rounded-5">
+              <div class="col-5 d-flex p-0">
+                <img src="./uploads/iconSoda.png" class="w-100 rounded-5 shadow" alt="">
+              </div>
+              <div class="col-7 d-flex flex-column justify-content-between">
+                <h3 class="fs-5 text-white p-3 mb-0">Coca-cola</h4>
+                <p class="fs-4 fw-bold text-white px-3 m-0">6.99€</p>
+                <div class="d-flex justify-content-end">
+                  <button class="addProductButton btn btn-primary text-white m-3 rounded-pill px-4">Ajouter</button>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="col-sm-9 col-lg-4 col-xl-3 m-3 m-sm-5 foodWrapper rounded-5 bg-soda">
+            <div class="row shadow rounded-5">
+              <div class="col-5 d-flex p-0">
+                <img src="./uploads/iconSoda.png" class="w-100 rounded-5 shadow" alt="">
+              </div>
+              <div class="col-7 d-flex flex-column justify-content-between">
+                <h3 class="fs-5 text-white p-3 mb-0">Coca-cola</h4>
+                <p class="fs-4 fw-bold text-white px-3 m-0">6.99€</p>
+                <div class="d-flex justify-content-end">
+                  <button class="addProductButton btn btn-primary text-white m-3 rounded-pill px-4">Ajouter</button>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="col-sm-9 col-lg-4 col-xl-3 m-3 m-sm-5 foodWrapper rounded-5 bg-soda">
+            <div class="row shadow rounded-5">
+              <div class="col-5 d-flex p-0">
+                <img src="./uploads/iconSoda.png" class="w-100 rounded-5 shadow" alt="">
+              </div>
+              <div class="col-7 d-flex flex-column justify-content-between">
+                <h3 class="fs-5 text-white p-3 mb-0">Coca-cola</h4>
+                <p class="fs-4 fw-bold text-white px-3 m-0">6.99€</p>
+                <div class="d-flex justify-content-end">
+                  <button class="addProductButton btn btn-primary text-white m-3 rounded-pill px-4">Ajouter</button>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="col-sm-9 col-lg-4 col-xl-3 m-3 m-sm-5 foodWrapper rounded-5 bg-soda">
+            <div class="row shadow rounded-5">
+              <div class="col-5 d-flex p-0">
+                <img src="./uploads/iconSoda.png" class="w-100 rounded-5 shadow" alt="">
+              </div>
+              <div class="col-7 d-flex flex-column justify-content-between">
+                <h3 class="fs-5 text-white p-3 mb-0">Coca-cola</h4>
+                <p class="fs-4 fw-bold text-white px-3 m-0">6.99€</p>
+                <div class="d-flex justify-content-end">
+                  <button class="addProductButton btn btn-primary text-white m-3 rounded-pill px-4">Ajouter</button>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="row py-4 bg-white d-flex carouselWrapper justify-content-center flex-row overflow-auto">
+        <div class="col d-flex justify-content-center">
+            <div role="button" id="carouselPreviousButton" class="carouselButton d-none d-sm-none d-lg-flex mx-0 mx-sm-4 col-2 d-sm-flex justify-content-end align-items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 12 12">
+                <g transform="rotate(-90 6 6)">
+                  <path fill="#FFECCE" d="M2.22 7.53a.75.75 0 0 0 1.06 0L6 4.81l2.72 2.72a.75.75 0 0 0 1.06-1.06L6.53 3.22a.75.75 0 0 0-1.06 0L2.22 6.47a.75.75 0 0 0 0 1.06Z"/>
+                </g>
+              </svg>
+            </div>
+            <article role="button" class="activeButton carouselWrapper foodButton mx-2 mx-sm-3" value="burger">
+              <img src="./uploads/iconBurger.png" class="mx-1 my-5 border border-3 border-primary rounded-circle" alt="...">
+            </article>
+            <article role="button" class="carouselWrapper foodButton mx-2 mx-sm-3" value="iceCream">
+              <img src="./uploads/iceCream.png" class="mx-1 my-5 border border-3 border-primary rounded-circle" alt="...">
+            </article>
+            <article role="button" class="carouselWrapper foodButton mx-2 mx-sm-3" value="wrap">
+              <img src="./uploads/wrap.png" class="mx-1 my-5 border border-3 border-primary rounded-circle" alt="...">
+            </article>
+            <article role="button" class="carouselWrapper foodButton mx-2 mx-sm-3" value="fries">
+              <img src="./uploads/fries.png" class="mx-1 my-5 border border-3 border-primary rounded-circle" alt="...">
+            </article>
+            <article role="button" class="carouselWrapper foodButton mx-2 mx-sm-3" value="soda">
+              <img src="./uploads/soda.png" class="mx-1 my-5 border border-3 border-primary rounded-circle" alt="...">
+            </article>
+            <div role="button" id="carouselNextButton" class="carouselButton d-none d-sm-none d-lg-flex mx-0 mx-sm-4 col-2 d-sm-flex justify-content-start align-items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 12 12">
+                <g transform="rotate(90 6 6)">
+                  <path fill="#FFECCE" d="M2.22 7.53a.75.75 0 0 0 1.06 0L6 4.81l2.72 2.72a.75.75 0 0 0 1.06-1.06L6.53 3.22a.75.75 0 0 0-1.06 0L2.22 6.47a.75.75 0 0 0 0 1.06Z"/>
+                </g>
+              </svg>
+            </div>
+          </div>
+      </section>
+      <section class="row d-flex flex-column flex-sm-row justify-content-center align-items-center position-relative overflow-hidden">
+        <article class="col col-lg-5 col-xl-3 my-5">
+          <h2 class="text-white text-center mt-5 mb-3 text-shadow">Programme fidélité</h2>
+          <div class="p-4 bg-white text-primary mt-3 rounded-5 position-relative overflow-hidden">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis sunt, numquam nisi maxime saepe ipsum repudiandae ex. Ipsam, corrupti quod itaque quas dolor, voluptates eveniet aliquam, temporibus dolores aspernatur reiciendis?
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis sunt, numquam nisi maxime saepe ipsum repudiandae ex. Ipsam, corrupti quod itaque quas dolor, voluptates eveniet aliquam, temporibus dolores aspernatur reiciendis?
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis sunt, numquam nisi maxime saepe ipsum repudiandae ex. Ipsam, corrupti quod itaque quas dolor, voluptates eveniet aliquam, temporibus dolores aspernatur reiciendis?
+            </p>
+            <div class="fidelityForm position-absolute w-100 top-0 start-0 d-flex justify-content-center bg-white">
+              <form class="row d-flex justify-content-center align-items-center my-2">
+                <h3 class="text-center fw-bold mt-2">Inscription</h3>
+                <div class="form-outline mb-1 mx-5 col-10">
+                  <label for="customerName" class="form-label">Nom, Prénom</label>
+                  <input type="name" class="form-control" id="customerName">
+                </div>
+                <div class="form-outline mb-1 mx-5 col-10">
+                  <label for="customerEmail" class="form-label">Email*</label>
+                  <input type="email" class="form-control" required id="customerEmail" aria-describedby="emailHelp">
+                  <div id="emailHelp" class="form-text">Nous ne partagerons jamais votre email avec d'autres personnes.</div>
+                </div>
+                <div class="form-outline mb-1 col-10">
+                  <label class="form-label" for="phone">Téléphone</label>
+                  <input type="text" id="phone" class="form-control" data-mdb-input-mask="+33 6 88 88 88 88" />
+                </div>
+                <button type="submit" class="subscribeButton bg-transparent border-0 text-white m-3 px-3 py-0 col-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="rounded-circle bg-primary" width="56" height="56" viewBox="0 0 14 14">
+                    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="m4 8l2.05 1.64a.48.48 0 0 0 .4.1a.5.5 0 0 0 .34-.24L10 4"/>
+                    </g>
+                  </svg>
+                </button>
+              </form>
+            </div>
+          </div>
+            <div class="row d-flex justify-content-center mb-5 mt-3 position-relative overflow-hidden">
+              <button class="fidelityButton btn btn-primary text-white m-3 rounded-pill px-4 py-2 col-9">J'en profite !</button>
+              <button class="cancelSubscribeButton btn btn-primary text-white m-3 rounded-pill px-4 py-2 col-9 position-absolute">Plus tard...</button>
+            </div>
+          </div>
+        </article>
+        <article class="col-3 d-flex justify-content-center">
+          <img src="./uploads/fidelityCard.png" class="object-fit-cover" alt="">
+        </article>
+        <img src="./uploads/card.png" class="fidelityCardImg1 position-absolute w-25 p-0" alt="fast good burger fidelity card">
+        <img src="./uploads/card.png" class="fidelityCardImg2 position-absolute w-25 p-0" alt="fast good burger fidelity card">
+      </section>
+      <section id="news" class="row bg-white d-flex justify-content-center mb-5">
+        <h2 class="text-primary text-center m-5">Actualités</h2>
+        <div class="col col-xl-8 d-flex justify-content-center align-items-center flex-column flex-lg-row">
+          <article role="button" class="newsWrapper my-2 my-lg-5 mx-3 rounded-5 border text-center shadow position-relative overflow-hidden">
+            <h3 class="text-white text-shadow position-absolute my-3 start-0 w-100 text-center">Fast Good News</h3>
+            <img src="./uploads/burger1.jpg" class="object-fit-cover w-100 rounded-5 position-absolute top-0 start-0" alt="news n°1 of fast good burger">
+            <button class="btn btn-primary py-3 text-white position-absolute end-0 w-100 rounded-0">Voir plus</button>
+          </article>
+          <article role="button" class="newsWrapper my-2 my-lg-5 mx-3 rounded-5 border text-center shadow position-relative overflow-hidden">
+            <h3 class="text-white text-shadow position-absolute my-3 start-0 w-100 text-center">Fast Good News</h3>
+            <img src="./uploads/burger2.jpg" class="object-fit-cover w-100 rounded-5 position-absolute top-0 start-0" alt="news n°2 of fast good burger">
+            <button class="btn btn-primary py-3 text-white position-absolute end-0 w-100 rounded-0">Voir plus</button>
+          </article>
+          <article role="button" class="newsWrapper my-2 my-lg-5 mx-3 rounded-5 border text-center shadow position-relative overflow-hidden">
+            <h3 class="text-white text-shadow position-absolute my-3 start-0 w-100 text-center">Fast Good News</h3>
+            <img src="./uploads/burger3.jpg" class="object-fit-cover w-100 rounded-5 position-absolute top-0 start-0" alt="news n°3 of fast good burger">
+            <button class="btn btn-primary py-3 text-white position-absolute end-0 w-100 rounded-0">Voir plus</button>
+          </article>
+          <article role="button" class="newsWrapper my-2 my-lg-5 mx-3 rounded-5 border text-center shadow position-relative overflow-hidden">
+            <h3 class="text-white text-shadow position-absolute my-3 start-0 w-100 text-center">Fast Good News</h3>
+            <img src="./uploads/burger4.jpg" class="object-fit-cover w-100 rounded-5 position-absolute top-0 start-0" alt="news n°4 of fast good burger">
+            <button class="btn btn-primary py-3 text-white position-absolute end-0 w-100 rounded-0">Voir plus</button>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer id="contact" class="bg-secondary container-fluid">
+      <h2 class="text-white text-shadow text-center pt-5">Contact</h2>
+      <form class="row d-flex justify-content-center my-3">
+        <div class="mb-3 mx-5 col-lg-8 col-xl-6">
+          <label for="customerName" class="form-label text-primary">Nom</label>
+          <input type="name" class="form-control" id="customerName">
+        </div>
+        <div class="mb-3 mx-5 col-lg-8 col-xl-6">
+          <label for="customerLastName" class="form-label text-primary">Prénom</label>
+          <input type="name" class="form-control" id="customerLastName">
+        </div>
+        <div class="mb-3 mx-5 col-lg-8 col-xl-6">
+          <label for="customerEmail" class="form-label text-primary">Email*</label>
+          <input type="email" class="form-control" required id="customerEmail" aria-describedby="emailHelp">
+          <div id="emailHelp" class="form-text">Nous ne partagerons jamais votre email avec d'autres personnes.</div>
+        </div>
+        <div class="mb-3 mx-5 col-lg-8 col-xl-6">
+          <label for="message" class="form-label text-primary">Un petit message* ?</label>
+          <textarea resize="none" required class="form-control" id="message" placeholder="J'adore les burgers..."></textarea>
+        </div>
+        <div class="col col-lg-8 col-xl-6 d-flex justify-content-center justify-content-lg-end my-4">
+          <button type="submit" class="btn btn-primary col-10 col-lg-3 text-white rounded-pill">Envoyer</button>
+        </div>
+      </form>
+      <section class="row d-flex justify-content-center mt-5">
+        <article class="col-lg-4 col-xl-3 d-flex justify-content-start">
+          <ul class="p-0">
+            <li class="mb-3">
+              <a href="#" class="text primary">Mentions légales</a>
+            </li>
+            <li class="mb-3">
+              <a href="#" class="text primary">Actualités</a>
+            </li>
+            <li class="mb-3">
+              <a href="#" class="text primary">Contact</a>
+            </li>
+            <li class="mb-3">
+              <a href="#" class="text primary">Programme fidélité</a>
+            </li>
+            <li class="mb-3">
+              <a href="#" class="text primary">Politique général de vente</a>
+            </li>
+          </ul>
+        </article>
+        <article class="col-lg-4 col-xl-3 d-flex align-items-center justify-content-center justify-content-lg-end">
+          <ul class="d-flex">
+            <li class="socialNetworkLink mx-2">
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24">
+                  <path fill="#FC6363" d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3Z"/>
+                </svg>
+              </a>
+            </li>
+            <li class="socialNetworkLink mx-2">
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24">
+                  <path fill="#FC6363" d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/>
+                </svg>
+              </a>
+            </li>
+            <li class="socialNetworkLink mx-2">
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24">
+                  <path fill="#FC6363" d="M22.46 6c-.77.35-1.6.58-2.46.69c.88-.53 1.56-1.37 1.88-2.38c-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29c0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15c0 1.49.75 2.81 1.91 3.56c-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07a4.28 4.28 0 0 0 4 2.98a8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21C16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56c.84-.6 1.56-1.36 2.14-2.23Z"/>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </article>
+      </section>
+    </footer>
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>

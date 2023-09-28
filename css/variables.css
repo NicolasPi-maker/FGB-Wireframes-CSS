@@ -1,0 +1,33 @@
+:root {
+  --main-text-font: "Kavoon", cursive;
+  --common-text-font: "Baloo 2", cursive;
+  --iceCream-bg-color: #97cbc8;
+  --wings-bg-color: #301e19;
+  --wrap-bg-color: #f2dfc2;
+  --soda-bg-color: #a5d0c2;
+}
+
+html .nav-item > a {
+  font-size: 16px;
+}
+
+html .btn {
+  font-family: var(--main-text-font);
+  font-size: larger;
+}
+
+html h2 {
+  font-size: 46px;
+}
+
+html h1 {
+  font-size: 64px;
+}
+
+h1, .nav-item > a, h2 {
+  font-family: var(--main-text-font);
+}
+
+h3 {
+  font-family: var(--common-text-font);
+}
