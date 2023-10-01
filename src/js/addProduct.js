@@ -11,6 +11,7 @@ let productCount = 0;
 if(localStoredProductCount && localStoredProductCount > 0) {
   productCount = localStoredProductCount;
 }
+
 if(productCountDiv) {
   for(let i = 0; i < productCountDiv.length; i++) {
     productCountDiv[i].innerHTML = `<p>${productCount}</p>`;
@@ -25,8 +26,8 @@ if(addProductButtons) {
         productCountDiv[j].innerHTML = `<p>${productCount}</p>`;
       }
       let food = foodWrapper[i];
-      playAnimationMultiple(productCountDiv, "addProductAnimation");
-      playAnimationOne(food, "addProductWrapperAnimation");
+      playAnimation(productCountDiv, "addProductAnimation");
+      playAnimation(food, "addProductWrapperAnimation");
       sessionStorage.setItem('productCount', productCount);
     })
   }
@@ -35,21 +36,26 @@ if(addProductButtons) {
   }, 1000);
 }
 
-const playAnimationOne = (domElement, className)  => {
+const playAnimation = (domElement, className) => {
+  // check if domElement is an array and is not empty
+  if(domElement.length > 0) {
+    // if true, remove all classes from all elements
+    for(let j = 0; j < domElement.length; j++) {
+      domElement[j].classList.remove(className);
+      setTimeout( () => {
+        // then add the class to all elements after 1 second
+        domElement[j].classList.add(className);
+      },10);
+    }
+  } else {
+    // if false, just remove the class
     domElement.classList.remove(className);
     setTimeout( () => {
+      // then add the class on the element after 1 second
       domElement.classList.add(className);
     },10);
   }
-
-const playAnimationMultiple = (domElements, className)  => {
-  for(let j = 0; j < domElements.length; j++) {
-    domElements[j].classList.remove(className);
-    setTimeout( () => {
-      domElements[j].classList.add(className);
-    },10);
-  }
-}
+};
 
 // Manage click event on order button 
 getOrderButton.addEventListener('click', () => {
@@ -60,7 +66,7 @@ getOrderButton.addEventListener('click', () => {
     alertSuccessWrapper.innerHTML = alertSuccessHtml;
     // On Success set order button to set product count at 0
     productCount = 0;
-    sessionStorage.setItem('productCount', 0);
+    sessionStorage.setItem('productCount', productCount);
     if(productCountDiv) {
       for(let i = 0; i < productCountDiv.length; i++) {
         productCountDiv[i].innerHTML = `<p>${sessionStorage.getItem('productCount')}</p>`;
